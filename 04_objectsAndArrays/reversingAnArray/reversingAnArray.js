@@ -14,6 +14,16 @@ function reverseArray(array) {
 function reverseArrayInPlaceMethod(array) {
   return array.reverse();
 }
+// reverse an array in situ
+function reverseArray(a) {
+  for (let i = 0; i < a.length / 2; i++) {
+    let holder;
+    holder = a[a.length - 1 - i];
+    a[a.length - 1 - i] = a[i];
+    a[i] = holder;
+  }
+  return a;
+}
 
 console.log(reverseArray(array));
 var a = [3, 5, 7, 8];
